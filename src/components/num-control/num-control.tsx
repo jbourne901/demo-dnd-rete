@@ -2,7 +2,7 @@ import {Node as ReteNode} from "rete";
 import {Emitter as ReteEmitter} from "rete/types/core/emitter";
 import {EventsTypes as ReteEventsTypes} from "rete/types/events";
 import NumControlComponent from "./num-control-component";
-import {ReteUpdatableControl} from "../../types/rete-updatable-control";
+import {ReteUpdatableControl} from "../../types/flowchart/rete-updatable-control";
 
 interface INumControlProps {
   readonly: boolean,

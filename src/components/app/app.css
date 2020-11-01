@@ -1,9 +1,67 @@
+:root {
+  --flowchart-node-bgcolor: rgba(35,35,35, .7);
+  --flowchart-nodehover-bgcolor: rgba(55,55,55, .7);
+  --flowchart-canvas-bgcolor:  #272727;
+  --flowchart-canvas-bgcolor1: #1d1d1d;
+  --flowchart-canvas-bgcolor1: #363636;
+  --flowchart-text-color: white;
+  --flowchart-node-bordercolor: darkgray;
+  --flowchart-node-borderthickness: 2px;
+  --flowchart-nodeselected-bordercolor: rgba(200,250,150, 1);
+  --flowchart-nodeselected-borderthickness: 4px;
+  --flowchart-node-title-bordercolor: white;
+  --flowchart-socket-bgcolor: lightgray;
+  --flowchart-socket-bordercolor: gray;
+  --flowchart-input-bgcolor: #505050;
+  --flowchart-node-title-backgroundcolor: #555;
+  
+  /*
+  --flowchart-node-bgcolor: rgba(110, 136, 255, 0.3);    
+  --flowchart-nodehover-bgcolor: rgba(130, 153, 255, 0.8);
+  --flowchart-canvas-bgcolor:  white;
+  --flowchart-canvas-bgcolor1: lightblue;
+  --flowchart-canvas-bgcolor2: lightblue;
+  --flowchart-text-color: black;
+  --flowchart-node-bordercolor: steelblue;
+  --flowchart-node-borderthickness: 2px;
+  --flowchart-nodeselected-bordercolor: rgba(55,55,55, .7);
+  --flowchart-nodeselected-borderthickness: 4px;
+  --flowchart-node-title-bordercolor: #3e48af;
+  --flowchart-socket-bgcolor: steelblue;
+  --flowchart-socket-bordercolor: white;
+  --flowchart-input-bgcolor: white;
+  --flowchart-node-title-backgroundcolor: transparent;
+
+
+  */
+}
+
 .app {
   font-family: sans-serif;
   text-align: center;
 }
 
+
 .app-container {
   width: 100vw;
   height: 100vh;
+  background-color: var(--flowchart-canvas-bgcolor);
+  background-size: 170px 170px;
+  background-image: linear-gradient(90deg,transparent 80.92px,var(--flowchart-canvas-bgcolor1) 0,var(--flowchart-canvas-bgcolor1) 89.08px,transparent 0),
+                    linear-gradient(180deg,transparent 80.92px,var(--flowchart-canvas-bgcolor1) 0,var(--flowchart-canvas-bgcolor1) 89.08px,transparent 0),
+                    linear-gradient(90deg,transparent 82.28px,var(--flowchart-canvas-bgcolor1) 0,var(--flowchart-canvas-bgcolor1) 87.72px,transparent 0),
+                    linear-gradient(90deg,transparent 41.14px,var(--flowchart-canvas-bgcolor1) 0,var(--flowchart-canvas-bgcolor1) 43.86px,transparent 0),
+                    linear-gradient(90deg,transparent 126.14px,var(--flowchart-canvas-bgcolor1) 0,var(--flowchart-canvas-bgcolor1) 128.86px,transparent 0),
+                    linear-gradient(90deg,transparent 167.28px,var(--flowchart-canvas-bgcolor1) 0,var(--flowchart-canvas-bgcolor1) 172.72px,transparent 0),
+                    linear-gradient(180deg,transparent 82.28px,var(--flowchart-canvas-bgcolor1) 0,var(--flowchart-canvas-bgcolor1) 87.72px,transparent 0),
+                    linear-gradient(180deg,transparent 41.14px,var(--flowchart-canvas-bgcolor1) 0,var(--flowchart-canvas-bgcolor1) 43.86px,transparent 0),
+                    linear-gradient(180deg,transparent 126.14px,var(--flowchart-canvas-bgcolor1) 0,var(--flowchart-canvas-bgcolor1) 128.86px,transparent 0),
+                    linear-gradient(180deg,transparent 167.28px,var(--flowchart-canvas-bgcolor1) 0,var(--flowchart-canvas-bgcolor1) 172.72px,transparent 0);
 }
+
+/* fix */
+.connection path {
+  stroke: #4a98d0 !important;
+  stroke-width: 2px !important;
+}
+

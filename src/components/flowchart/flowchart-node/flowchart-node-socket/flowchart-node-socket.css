@@ -1,0 +1,37 @@
+
+.flowchart-node-socket {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid var(--flowchart-socket-bordercolor);
+    border-radius: 12px;
+    width: 24px;
+    height: 24px;
+    margin: 6px;
+    vertical-align: middle;    
+    z-index: 2;
+    box-sizing: border-box;
+
+    background: var(--flowchart-socket-bgcolor);
+  }
+
+
+  .flowchart-node-socket:hover {
+    border-width: 4px;
+  }
+
+  .flowchart-node-socket.multiple {
+    border-color: yellow;
+  }
+
+  .flowchart-node-output-socket {
+    margin-right: -12px;
+  }
+
+  .flowchart-node-input-socket {
+    margin-left: -12px;   
+  }
+  
+  .flowchart-node-socket:hover .flowchart-node-socket-icon {
+    display: none !important;
+  }
+  

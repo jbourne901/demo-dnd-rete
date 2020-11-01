@@ -1,20 +1,21 @@
 import Rete, {Socket as ReteSocket, Node as ReteNode, Component as ReteComponent} from "rete";
 import { NodeData, WorkerInputs, WorkerOutputs } from "rete/types/core/data";
 import NumControl from "../num-control";
+import { FlowchartComponentTemplate } from "../../types/flowchart/flowchart-component-template";
 
-class AddComponent extends ReteComponent {
-  private numSocket: ReteSocket;
-  constructor(numSocket: ReteSocket) {
-    super("Add");
+class AddComponent extends FlowchartComponentTemplate {
+  constructor(socketType: ReteSocket) {
+    super("Add", socketType);
     //TODO review
     //(this.data as any).component = MyNode;
-    this.numSocket = numSocket;
   }
 
   public async builder(node: ReteNode) {
-    const inp1 = new Rete.Input("num1", "Number", this.numSocket);
-    const inp2 = new Rete.Input("num2", "Number2", this.numSocket);
-    const out = new Rete.Output("num", "Number", this.numSocket);
+    //true = allow multiple connections from to the same input
+    const inp1 = new Rete.Input("num1", "Number", this.socketType, true);
+    const inp2 = new Rete.Input("num2", "Number2", this.socketType, true);
+    //false = dont' allow multiple connections from the same output
+    const out = new Rete.Output("num", "Number", this.socketType, false);
 
     inp1.addControl(new NumControl(this.editor, "num1", node));
     inp2.addControl(new NumControl(this.editor, "num2", node));

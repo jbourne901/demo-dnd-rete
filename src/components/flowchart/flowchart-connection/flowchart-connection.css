@@ -1,0 +1,22 @@
+.flowchart-connection {
+  overflow: visible !important;
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.flowchat-connection > * {
+  pointer-events: all;
+}
+
+.flowchart-connection-main-path {
+    fill: none;
+    stroke-width: 1px;
+    stroke: black;
+    pointer-events: none;
+}
+
+
+    
+ 
+  

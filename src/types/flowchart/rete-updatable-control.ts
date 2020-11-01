@@ -4,7 +4,8 @@ class ReteUpdatableControl extends Rete.Control {
         super(key);
     }
     public async update() {
-    }    
+        
+    }
 }
 
 export {ReteUpdatableControl};
